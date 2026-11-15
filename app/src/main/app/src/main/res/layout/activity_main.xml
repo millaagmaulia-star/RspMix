@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://android.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnStartCapture"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="MULAI VOCALFX &amp; TANGKAP YOUTUBE"
+            android:backgroundTint="#E91E63"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MASTER VU METER"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:layout_marginTop="12dp" />
+
+        <ProgressBar
+            android:id="@+id/vuMeterProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#00E676"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRESET VOKAL CEPAT"
+            android:textColor="#00E5FF"
+            android:textStyle="bold"
+            android:layout_marginTop="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/btnPresetPop"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="44dp"
+                android:text="Pop"
+                android:textSize="12sp"
+                android:backgroundTint="#2C2C2C"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnPresetHall"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="44dp"
+                android:text="Hall"
+                android:textSize="12sp"
+                android:backgroundTint="#2C2C2C"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnPresetHarmHigh"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="44dp"
+                android:text="Harm +3"
+                android:textSize="12sp"
+                android:backgroundTint="#2C2C2C"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnPresetHarmLow"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="44dp"
+                android:text="Harm -1Oct"
+                android:textSize="12sp"
+                android:backgroundTint="#2C2C2C"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOUNDBOARD LIVE &amp; AUTO-DUCKING"
+            android:textColor="#00E5FF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/btnSfxClap"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="44dp"
+                android:text="Tepuk Tangan"
+                android:textSize="11sp"
+                android:backgroundTint="#FF9800"
+                android:textColor="#000000"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnSfxHorn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="44dp"
+                android:text="Sorak"
+                android:textSize="11sp"
+                android:backgroundTint="#FF9800"
+                android:textColor="#000000"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnSfxDing"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="44dp"
+                android:text="Ting!"
+                android:textSize="11sp"
+                android:backgroundTint="#FF9800"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchDucking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auto-Ducking (Musik mengecil saat bicara)"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MIXER UTAMA"
+            android:textColor="#00E5FF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView android:text="Volume Vokal (Mic)" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <SeekBar android:id="@+id/seekMic" android:max="150" android:progress="100" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Volume Musik (YouTube)" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <SeekBar android:id="@+id/seekMusic" android:max="150" android:progress="70" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EFEK VOKAL &amp; HARMONI"
+            android:textColor="#00E5FF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView android:text="Auto-Tune / Pitch Correction" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <SeekBar android:id="@+id/seekAutoTune" android:max="100" android:progress="0" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Harmoni Backing Vocal (Mix)" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <SeekBar android:id="@+id/seekHarmony" android:max="100" android:progress="0" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Reverb / Gema Ruangan" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <SeekBar android:id="@+id/seekReverb" android:max="100" android:progress="25" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Compressor (Padatkan Suara)" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <SeekBar android:id="@+id/seekComp" android:max="100" android:progress="50" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Noise Gate (Redam Suara Kipas)" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <SeekBar android:id="@+id/seekGate" android:max="100" android:progress="15" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3-BAND EQUALIZER VOKAL"
+            android:textColor="#00E5FF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView android:text="Low (Bass)" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <SeekBar android:id="@+id/seekEqLow" android:max="100" android:progress="45" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Mid (Vokal Tengah)" android:textColor="#FFFFFF" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <SeekBar android:id="@+id/seekEqMid" android:max="100" android:progress="50" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
