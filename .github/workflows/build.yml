@@ -14,10 +14,13 @@ jobs:
 
       - name: Perbaiki File XML Otomatis di Server
         run: |
+          NS="http://android.com"
+          RES="/apk/res/android"
+          FULL_NS="${NS}${RES}"
           mkdir -p app/src/main/res/layout
-          cat << 'EOF' > app/src/main/AndroidManifest.xml
+          cat << EOF > app/src/main/AndroidManifest.xml
           <?xml version="1.0" encoding="utf-8"?>
-          <manifest xmlns:android="http://android.com">
+          <manifest xmlns:android="$FULL_NS">
               <uses-permission android:name="android.permission.RECORD_AUDIO" />
               <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
               <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
@@ -43,6 +46,7 @@ jobs:
               </application>
           </manifest>
           EOF
+          sed -i "s|xmlns:android=\"[^\"]*\"|xmlns:android=\"$FULL_NS\"|g" app/src/main/res/layout/activity_main.xml
 
       - name: Siapkan Java 17
         uses: actions/setup-java@v4
