@@ -1,2 +1,2 @@
-- name: Accept Android SDK Licenses
-  run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
+- name: Setup Android SDK
+  uses: reactivecircus/android-emulator-runner@v2
